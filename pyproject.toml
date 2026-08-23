@@ -1,0 +1,14 @@
+[project]
+name = "support-memory-lab"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "fastapi>=0.141.1",
+    "google-adk[db,gcp]==2.7.1",
+    "google-cloud-bigquery>=3.43.0",
+    "greenlet>=3.5.5",
+    "pillow>=12.3.0",
+    "python-dotenv>=1.2.3",
+    "uvicorn[standard]>=0.52.4",
+]

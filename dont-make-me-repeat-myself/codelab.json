@@ -1,0 +1,28 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2026-08-23T14:08:33-07:00",
+  "id": "dont-make-me-repeat-myself",
+  "duration": 142,
+  "title": "Don't Make Me Repeat Myself: Build a Support Agent With Real Memory",
+  "summary": "Every support experience people hate is a memory failure. Fix five of them yourself — write the load-bearing line, launch adk web, type to Iris, and watch every mechanism fire. Cloud Shell, ADK, Gemini, and one very patient customer named Maya.",
+  "source": ".codelab_local.md",
+  "theme": "",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "adk",
+    "agents",
+    "memory",
+    "gemini",
+    "cloudshell"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/cuppibla/support-memory-lab/issues",
+  "url": "dont-make-me-repeat-myself"
+}

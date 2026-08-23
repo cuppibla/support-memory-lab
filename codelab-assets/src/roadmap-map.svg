@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="640" fill="#FFFFFF"/>
+  <text x="70" y="60" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="700" fill="#0F172A">The road, precisely</text>
+  <text x="70" y="92" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="18" fill="#64748B">Eleven stops · the mono line is what you wire · the gray line is where you see it work</text>
+
+  <!-- row 1 spine -->
+  <path d="M100 200 L 1500 200" stroke="#CBD5E1" stroke-width="3" fill="none"/>
+  <!-- row 2 spine -->
+  <path d="M1500 200 C 1560 200, 1560 430, 1500 430 L 100 430" stroke="#CBD5E1" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <g font-family='"SF Mono",Menlo,Consolas' text-anchor="middle">
+    <!-- row 1: 6 stops -->
+    <g>
+      <circle cx="170" cy="200" r="16" fill="#0F172A"/><text x="170" y="206" font-size="14" font-weight="700" fill="#FFF">1</text>
+      <text x="170" y="150" font-size="15" fill="#0F172A" font-weight="700">state</text>
+      <text x="170" y="172" font-size="12.5" fill="#4338CA">tool_context.state</text>
+      <text x="170" y="240" font-size="12" fill="#94A3B8">State tab fills</text>
+    </g>
+    <g>
+      <circle cx="420" cy="200" r="16" fill="#0F172A"/><text x="420" y="206" font-size="14" font-weight="700" fill="#FFF">2</text>
+      <text x="420" y="150" font-size="15" fill="#0F172A" font-weight="700">the handoff</text>
+      <text x="420" y="172" font-size="12.5" fill="#92400E">LongRunningFunctionTool</text>
+      <text x="420" y="240" font-size="12" fill="#94A3B8">another process resumes</text>
+    </g>
+    <g>
+      <circle cx="670" cy="200" r="16" fill="#10B981"/><text x="670" y="206" font-size="14" font-weight="700" fill="#FFF">✦</text>
+      <text x="670" y="150" font-size="15" fill="#0F172A" font-weight="700">the desk, live</text>
+      <text x="670" y="172" font-size="12.5" fill="#047857">npm run dev</text>
+      <text x="670" y="240" font-size="12" fill="#94A3B8">Approve = your code</text>
+    </g>
+    <g>
+      <circle cx="920" cy="200" r="16" fill="#0F172A"/><text x="920" y="206" font-size="14" font-weight="700" fill="#FFF">3</text>
+      <text x="920" y="150" font-size="15" fill="#0F172A" font-weight="700">memory</text>
+      <text x="920" y="172" font-size="12.5" fill="#4338CA">add · search</text>
+      <text x="920" y="240" font-size="12" fill="#94A3B8">a new session knows</text>
+    </g>
+    <g>
+      <circle cx="1170" cy="200" r="16" fill="#0F172A"/><text x="1170" y="206" font-size="14" font-weight="700" fill="#FFF">☁</text>
+      <text x="1170" y="150" font-size="15" fill="#0F172A" font-weight="700">Memory Bank</text>
+      <text x="1170" y="172" font-size="12.5" fill="#4338CA">agentengine://…</text>
+      <text x="1170" y="240" font-size="12" fill="#94A3B8">survives restart</text>
+    </g>
+    <g>
+      <circle cx="1420" cy="200" r="16" fill="#0F172A"/><text x="1420" y="206" font-size="14" font-weight="700" fill="#FFF">4</text>
+      <text x="1420" y="150" font-size="15" fill="#0F172A" font-weight="700">the photo</text>
+      <text x="1420" y="172" font-size="12.5" fill="#92400E">save_artifact</text>
+      <text x="1420" y="240" font-size="12" fill="#94A3B8">a real file on disk</text>
+    </g>
+
+    <!-- row 2: 5 stops (right to left) -->
+    <g>
+      <circle cx="1420" cy="430" r="16" fill="#0F172A"/><text x="1420" y="436" font-size="14" font-weight="700" fill="#FFF">5</text>
+      <text x="1420" y="380" font-size="15" fill="#0F172A" font-weight="700">the graph</text>
+      <text x="1420" y="402" font-size="12.5" fill="#047857">check_known_issue</text>
+      <text x="1420" y="470" font-size="12" fill="#94A3B8">a citation path</text>
+    </g>
+    <g>
+      <circle cx="1170" cy="430" r="16" fill="#0F172A"/><text x="1170" y="436" font-size="14" font-weight="700" fill="#FFF">6</text>
+      <text x="1170" y="380" font-size="15" fill="#0F172A" font-weight="700">warehouse · data</text>
+      <text x="1170" y="402" font-size="12.5" fill="#B45309">bq load</text>
+      <text x="1170" y="470" font-size="12" fill="#94A3B8">six tables in console</text>
+    </g>
+    <g>
+      <circle cx="920" cy="430" r="16" fill="#0F172A"/><text x="920" y="436" font-size="14" font-weight="700" fill="#FFF">7</text>
+      <text x="920" y="380" font-size="15" fill="#0F172A" font-weight="700">warehouse · vectors</text>
+      <text x="920" y="402" font-size="12.5" fill="#B45309">ML.GENERATE_EMBEDDING</text>
+      <text x="920" y="470" font-size="12" fill="#94A3B8">meaning finds tickets</text>
+    </g>
+    <g>
+      <circle cx="670" cy="430" r="16" fill="#0F172A"/><text x="670" y="436" font-size="14" font-weight="700" fill="#FFF">8</text>
+      <text x="670" y="380" font-size="15" fill="#0F172A" font-weight="700">warehouse · Iris</text>
+      <text x="670" y="402" font-size="12.5" fill="#047857">warehouse_search</text>
+      <text x="670" y="470" font-size="12" fill="#94A3B8">chips over BigQuery</text>
+    </g>
+    <g>
+      <circle cx="420" cy="430" r="18" fill="#10B981"/><text x="420" y="436" font-size="14" font-weight="700" fill="#FFF">✓</text>
+      <text x="420" y="380" font-size="15" fill="#0F172A" font-weight="700">the product</text>
+      <text x="420" y="402" font-size="12.5" fill="#047857">same services, no microscope</text>
+      <text x="420" y="470" font-size="12" fill="#94A3B8">Maya never repeats herself</text>
+    </g>
+  </g>
+
+  <!-- caveat -->
+  <rect x="70" y="540" width="1460" height="56" rx="12" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+  <text x="90" y="564" font-family='-apple-system,Arial' font-size="15" font-weight="700" fill="#92400E">Every stop is the same loop: run it broken → delete a TODO prefix → relaunch → watch it work.</text>
+  <text x="90" y="586" font-family='-apple-system,Arial' font-size="14" fill="#B45309">Short-term is given by the framework; every long-term layer is a write policy + a recall policy you choose.</text>
+</svg>

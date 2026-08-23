@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720">
+  <defs>
+    <linearGradient id="llm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" fill="#8B5CF6"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" fill="#10B981"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="720" fill="#FFFFFF"/>
+  <text x="70" y="60" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="700" fill="#0F172A">Memory Bank: deploy once, connect from anywhere, survive everything</text>
+  <text x="70" y="92" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="18" fill="#64748B">Your write and recall policies don't change — only the service behind Runner(memory_service=…) does.</text>
+
+  <!-- local processes container -->
+  <rect x="70" y="150" width="620" height="420" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="90" y="178" font-family='"SF Mono",Menlo,Consolas' font-size="13" fill="#334155">your processes — restartable, disposable</text>
+
+  <rect x="100" y="205" width="260" height="90" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="120" y="238" font-family='"SF Mono",Menlo,Consolas' font-size="14" fill="#0F172A">adk web</text>
+  <text x="120" y="262" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#64748B">--memory_service_uri</text>
+  <text x="120" y="280" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#64748B">"agentengine://…"</text>
+
+  <rect x="400" y="205" width="270" height="90" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="420" y="238" font-family='"SF Mono",Menlo,Consolas' font-size="14" fill="#0F172A">your Runner (the desk)</text>
+  <text x="420" y="260" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#64748B">VertexAiMemoryBankService(</text>
+  <text x="420" y="278" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#64748B">  project, location, engine_id)</text>
+
+  <!-- the two policies -->
+  <rect x="100" y="360" width="260" height="90" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="120" y="392" font-family='"SF Mono",Menlo,Consolas' font-size="14" fill="#047857">close_ticket · WRITE</text>
+  <text x="120" y="416" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#64748B">add_session_to_memory(session)</text>
+
+  <rect x="400" y="360" width="270" height="90" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+  <text x="420" y="392" font-family='"SF Mono",Menlo,Consolas' font-size="14" fill="#047857">recall_history · READ</text>
+  <text x="420" y="416" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#64748B">search_memory(query)</text>
+
+  <text x="120" y="520" font-family='"SF Mono",Menlo,Consolas' font-size="13" fill="#B45309">Ctrl-C, restart, redeploy —</text>
+  <text x="120" y="540" font-family='"SF Mono",Menlo,Consolas' font-size="13" fill="#B45309">nothing here holds the memories</text>
+
+  <!-- cloud container -->
+  <rect x="900" y="150" width="630" height="420" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="920" y="178" font-family='"SF Mono",Menlo,Consolas' font-size="13" fill="#334155">Google Cloud · us-central1</text>
+
+  <rect x="940" y="215" width="550" height="130" rx="10" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+  <text x="960" y="250" font-family='"SF Mono",Menlo,Consolas' font-size="15" fill="#0F172A">Agent Engine instance</text>
+  <text x="960" y="276" font-family='"SF Mono",Menlo,Consolas' font-size="12.5" fill="#64748B">agent_engines.create()  →  reasoningEngines/1463…</text>
+  <text x="960" y="298" font-family='"SF Mono",Menlo,Consolas' font-size="12.5" fill="#64748B">verify: curl …/reasoningEngines · console: Agent Engine</text>
+
+  <rect x="940" y="390" width="550" height="130" rx="16" fill="url(#llm)"/>
+  <text x="965" y="428" font-family='"SF Mono",Menlo,Consolas' font-size="15" font-weight="700" fill="#FFFFFF">✦ Memory Bank</text>
+  <text x="965" y="454" font-family='"SF Mono",Menlo,Consolas' font-size="12.5" fill="#E0E7FF">distills conversations into facts (LLM-powered,</text>
+  <text x="965" y="474" font-family='"SF Mono",Menlo,Consolas' font-size="12.5" fill="#E0E7FF">async) · semantic recall · persistent</text>
+
+  <!-- edges -->
+  <g stroke="#8B5CF6" stroke-width="2.5" fill="none">
+    <path d="M360 405 C 700 405, 760 440, 936 445" marker-end="url(#arrP)"/>
+  </g>
+  <g stroke="#10B981" stroke-width="2.5" fill="none">
+    <path d="M936 480 C 780 490, 740 405, 674 405" marker-end="url(#arrG)"/>
+  </g>
+  <g stroke="#94A3B8" stroke-width="2" fill="none">
+    <path d="M230 295 C 230 330, 230 340, 225 356" marker-end="url(#arr)"/>
+    <path d="M535 295 L 535 356" marker-end="url(#arr)"/>
+    <path d="M1215 345 L 1215 386" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- edge labels -->
+  <g font-family='"SF Mono",Menlo,Consolas' font-size="12.5">
+    <text x="726" y="366" fill="#8B5CF6" font-weight="700">write: the session's events</text>
+    <text x="726" y="524" fill="#047857" font-weight="700">read: distilled facts</text>
+    <text x="1230" y="372" fill="#64748B">hosts</text>
+  </g>
+
+  <!-- step circles -->
+  <g font-family='-apple-system,Arial' font-size="14" font-weight="700">
+    <circle cx="965" cy="192" r="15" fill="#0F172A"/><text x="965" y="197" fill="#FFF" text-anchor="middle">1</text>
+    <circle cx="230" cy="192" r="15" fill="#0F172A"/><text x="230" y="197" fill="#FFF" text-anchor="middle">2</text>
+    <circle cx="700" cy="362" r="15" fill="#0F172A"/><text x="700" y="367" fill="#FFF" text-anchor="middle">3</text>
+    <circle cx="700" cy="519" r="15" fill="#0F172A"/><text x="700" y="524" fill="#FFF" text-anchor="middle">4</text>
+  </g>
+
+  <!-- caveat -->
+  <rect x="70" y="620" width="1460" height="56" rx="12" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+  <text x="90" y="644" font-family='-apple-system,Arial' font-size="15" font-weight="700" fill="#92400E">① deploy the instance → ② connect (flag or three-parameter config) → ③ your write policy sends sessions → ④ your read policy gets distilled facts back.</text>
+  <text x="90" y="666" font-family='-apple-system,Arial' font-size="14" fill="#B45309">Distillation is asynchronous — a recall right after closing can be thin for ~30 seconds. The archive outlives every process on the left.</text>
+</svg>

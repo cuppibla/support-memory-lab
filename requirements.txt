@@ -1,0 +1,7 @@
+google-adk[db,gcp]==2.7.1
+fastapi
+uvicorn[standard]
+pillow
+python-dotenv
+aiosqlite
+greenlet

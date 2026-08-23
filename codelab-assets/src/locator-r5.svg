@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="280" viewBox="0 0 1150 280">
+  <rect width="1150" height="280" fill="#FFFFFF"/>
+  <line x1="306" y1="24" x2="306" y2="258" stroke="#E8EBF0" stroke-width="1.5"/>
+  <line x1="566" y1="24" x2="566" y2="258" stroke="#E8EBF0" stroke-width="1.5"/>
+  <line x1="826" y1="24" x2="826" y2="258" stroke="#E8EBF0" stroke-width="1.5"/>
+  <text x="76" y="48" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="20" font-weight="700" fill="#94A3B8" letter-spacing="1.6">WHICH MEMORY</text>
+  <text x="76" y="104" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">Working</text>
+  <text x="76" y="150" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">Episodic</text>
+  <circle cx="54" cy="186" r="6" fill="#6D28D9"/>
+  <text x="76" y="196" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="700" fill="#6D28D9" letter-spacing="-0.5">Semantic</text>
+  <text x="76" y="242" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">Procedural</text>
+  <text x="336" y="48" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="20" font-weight="700" fill="#94A3B8" letter-spacing="1.6">HOW LONG</text>
+  <text x="336" y="104" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">short-term</text>
+  <circle cx="314" cy="140" r="6" fill="#0F172A"/>
+  <text x="336" y="150" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="700" fill="#0F172A" letter-spacing="-0.5">long-term</text>
+  <text x="596" y="48" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="20" font-weight="700" fill="#94A3B8" letter-spacing="1.6">WHAT SHAPE</text>
+  <circle cx="574" cy="94" r="6" fill="#0F172A"/>
+  <text x="596" y="104" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="700" fill="#0F172A" letter-spacing="-0.5">structured</text>
+  <text x="596" y="150" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">unstructured</text>
+  <text x="856" y="48" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="20" font-weight="700" fill="#94A3B8" letter-spacing="1.6">WHERE IT SITS</text>
+  <text x="856" y="104" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">in the process</text>
+  <circle cx="834" cy="140" r="6" fill="#0F172A"/>
+  <text x="856" y="150" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="700" fill="#0F172A" letter-spacing="-0.5">on disk</text>
+  <text x="856" y="196" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="30" font-weight="500" fill="#D9DFE6" letter-spacing="-0.5">managed cloud</text>
+</svg>

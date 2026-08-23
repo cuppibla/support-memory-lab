@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="llm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0L10,5L0,10z" fill="#8B5CF6"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <text x="70" y="64" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="34" font-weight="700" fill="#0F172A">Three clients, one memory architecture</text>
+  <text x="70" y="98" font-family='-apple-system,"SF Pro Text","Helvetica Neue",Arial' font-size="20" fill="#64748B">The dev UI, a terminal script, and a React app all talk to the same Iris and the same stores — nothing about memory changes per client.</text>
+
+  <!-- client containers -->
+  <g font-family='"SF Mono",Menlo,Consolas'>
+    <rect x="70" y="140" width="440" height="150" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="90" y="168" font-size="14" fill="#334155">adk web . · :8000</text>
+    <rect x="100" y="185" width="380" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="120" y="218" font-size="15" fill="#0F172A">ADK dev UI</text>
+    <text x="120" y="242" font-size="13" fill="#64748B">chips · State tab · Traces</text>
+
+    <rect x="580" y="140" width="440" height="150" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="600" y="168" font-size="14" fill="#334155">supervisor.py · terminal</text>
+    <rect x="610" y="185" width="380" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="630" y="218" font-size="15" fill="#0F172A">reads pending escalations</text>
+    <text x="630" y="242" font-size="13" fill="#64748B">answers with FunctionResponse</text>
+
+    <rect x="1090" y="140" width="440" height="150" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="1110" y="168" font-size="14" fill="#334155">desk_app · uvicorn :8000 + vite :5173</text>
+    <rect x="1120" y="185" width="180" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="1140" y="218" font-size="15" fill="#0F172A">React UI</text>
+    <text x="1140" y="242" font-size="13" fill="#64748B">Approve button</text>
+    <rect x="1320" y="185" width="190" height="80" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="1340" y="218" font-size="15" fill="#0F172A">FastAPI</text>
+    <text x="1340" y="242" font-size="13" fill="#64748B">/api/chat · /api/approve</text>
+  </g>
+
+  <!-- iris -->
+  <rect x="540" y="380" width="530" height="96" rx="16" fill="url(#llm)"/>
+  <text x="580" y="420" font-family='"SF Mono",Menlo,Consolas' font-size="17" font-weight="700" fill="#FFFFFF">✦ iris · gemini-3-flash-preview</text>
+  <text x="580" y="448" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#E0E7FF">update_ticket · escalate_refund ⏸ · close_ticket</text>
+  <text x="580" y="464" font-family='"SF Mono",Menlo,Consolas' font-size="12" fill="#E0E7FF">recall_history · record_damage · search · check_known_issue</text>
+
+  <!-- memory container -->
+  <rect x="70" y="580" width="1460" height="200" rx="18" fill="#F8FAFC" fill-opacity="0.6" stroke="#94A3B8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="90" y="608" font-family='"SF Mono",Menlo,Consolas' font-size="14" fill="#334155">the memory architecture — shared by every client</text>
+  <g font-family='"SF Mono",Menlo,Consolas'>
+    <rect x="110" y="630" width="320" height="110" rx="10" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <text x="130" y="663" font-size="15" fill="#0F172A">lumen.db</text>
+    <text x="130" y="686" font-size="12.5" fill="#64748B">SqliteSessionService</text>
+    <text x="130" y="704" font-size="12.5" fill="#64748B">sessions · events · state</text>
+
+    <rect x="470" y="630" width="320" height="110" rx="10" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <text x="490" y="663" font-size="15" fill="#0F172A">artifacts_store/</text>
+    <text x="490" y="686" font-size="12.5" fill="#64748B">FileArtifactService</text>
+    <text x="490" y="704" font-size="12.5" fill="#64748B">user:lamp_photo.jpg</text>
+
+    <rect x="830" y="630" width="330" height="110" rx="10" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <text x="850" y="663" font-size="15" fill="#0F172A">memory service</text>
+    <text x="850" y="686" font-size="12.5" fill="#64748B">InMemoryMemoryService →</text>
+    <text x="850" y="704" font-size="12.5" fill="#64748B">agentengine://… (Memory Bank)</text>
+
+    <rect x="1200" y="630" width="300" height="110" rx="10" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2"/>
+    <text x="1220" y="663" font-size="15" fill="#0F172A">lumen_world.db</text>
+    <text x="1220" y="686" font-size="12.5" fill="#64748B">_shared/store.py</text>
+    <text x="1220" y="704" font-size="12.5" fill="#64748B">orders · batches · defects</text>
+  </g>
+
+  <!-- edges -->
+  <g stroke="#94A3B8" stroke-width="2" fill="none">
+    <path d="M290 290 L 700 378" marker-end="url(#arr)"/>
+    <path d="M1310 290 L 910 378" marker-end="url(#arr)"/>
+    <path d="M800 476 L 800 578" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+    <path d="M700 290 L 700 330 L 300 330 L 290 626" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+  </g>
+  <path d="M810 288 C 830 330, 830 340, 812 376" stroke="#8B5CF6" stroke-width="2.5" fill="none" marker-end="url(#arrP)"/>
+
+  <!-- edge labels -->
+  <g font-family='"SF Mono",Menlo,Consolas' font-size="13">
+    <text x="330" y="376" fill="#64748B">run_async(new_message)</text>
+    <text x="1030" y="330" fill="#64748B">POST /api/chat</text>
+    <text x="815" y="540" fill="#64748B">state · artifacts · memories</text>
+    <text x="140" y="480" fill="#64748B">reads the SAME lumen.db</text>
+    <text x="838" y="316" fill="#8B5CF6" font-weight="700">FunctionResponse</text>
+  </g>
+
+  <!-- step circles -->
+  <g font-family='-apple-system,Arial' font-size="14" font-weight="700">
+    <circle cx="330" cy="316" r="15" fill="#0F172A"/><text x="330" y="321" fill="#FFF" text-anchor="middle">1</text>
+    <circle cx="500" cy="352" r="15" fill="#0F172A"/><text x="500" y="357" fill="#FFF" text-anchor="middle">2</text>
+    <circle cx="800" cy="530" r="15" fill="#0F172A"/><text x="800" y="535" fill="#FFF" text-anchor="middle">3</text>
+    <circle cx="300" cy="560" r="15" fill="#0F172A"/><text x="300" y="565" fill="#FFF" text-anchor="middle">4</text>
+    <circle cx="852" cy="336" r="15" fill="#0F172A"/><text x="852" y="341" fill="#FFF" text-anchor="middle">5</text>
+  </g>
+
+  <!-- caveat -->
+  <rect x="70" y="810" width="1460" height="60" rx="12" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+  <text x="90" y="836" font-family='-apple-system,Arial' font-size="15" font-weight="700" fill="#92400E">The UI is a client of the memory architecture, not the owner of it.</text>
+  <text x="90" y="858" font-family='-apple-system,Arial' font-size="14" fill="#B45309">① a client sends a turn → ② Iris runs → ③ tools write to the shared stores → ④ any other process reads the same file → ⑤ and can even answer a parked call.</text>
+</svg>
