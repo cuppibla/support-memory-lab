@@ -1,6 +1,6 @@
 # Rung 5 — "We've never seen this issue."
 
-> This folder is a STARTER — it has a `# TODO(you):` hole the codelab walks you
+> This folder is a STARTER — it has a `# TODO: ` hole the codelab walks you
 > through. Answers: `_solutions/r5_known_issue/solution.py`.
 
 

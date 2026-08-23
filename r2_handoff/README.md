@@ -1,6 +1,6 @@
 # Rung 2 — "Please describe your issue from the beginning."
 
-> This folder is a STARTER — it has a `# TODO(you):` hole the codelab walks you
+> This folder is a STARTER — it has a `# TODO: ` hole the codelab walks you
 > through. Answers: `_solutions/r2_handoff/solution.py`.
 
 

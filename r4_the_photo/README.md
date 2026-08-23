@@ -1,6 +1,6 @@
 # Rung 4 — "Could you describe the damage?"
 
-> This folder is a STARTER — it has a `# TODO(you):` hole the codelab walks you
+> This folder is a STARTER — it has a `# TODO: ` hole the codelab walks you
 > through. Answers: `_solutions/r4_the_photo/solution.py`.
 
 

@@ -1,6 +1,6 @@
 # Rung 1 — "What was your order number again?"
 
-> This folder is a STARTER — it has a `# TODO(you):` hole the codelab walks you
+> This folder is a STARTER — it has a `# TODO: ` hole the codelab walks you
 > through. Answers: `_solutions/r1_short_term/solution.py`.
 
 

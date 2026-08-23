@@ -33,7 +33,7 @@ You play the support lead at **Lumen & Co.**, a smart-lamp company. Your agent i
 |:--:|---|:--:|---|
 | ![Iris](https://storage.googleapis.com/support-memory-lab-assets/img/avatar-iris.png) | **Iris** — the support agent you're fixing | ![Maya](https://storage.googleapis.com/support-memory-lab-assets/img/avatar-maya.png) | **Maya** — the customer holding a cracked lamp |
 
-Iris starts the lab with all five failures in place — *mechanically*, because the code for remembering isn't written yet. **You will write it.** Every rung repeats the same loop: run the broken behavior and watch it with your own eyes → open the file (`cloudshell edit`) → replace a `# TODO(you):` marker with the one line that is the whole lesson → relaunch `adk web` → same prompts, different world. Commands in this lab are the real commands; when a setup script runs, the codelab lists exactly what it did.
+Iris starts the lab with all five failures in place — *mechanically*, because the code for remembering isn't written yet. **You will write it.** Every rung repeats the same loop: run the broken behavior and watch it with your own eyes → open the file (`cloudshell edit`) → delete a `# TODO: ` prefix so the one line that is the whole lesson goes live → relaunch `adk web` → same prompts, different world. Commands in this lab are the real commands; when a setup script runs, the codelab lists exactly what it did.
 
 ### What you'll learn
 
