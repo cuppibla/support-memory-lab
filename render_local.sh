@@ -16,7 +16,7 @@ PY
 rm .codelab_local.md
 python3 - << 'PY'
 import hashlib, pathlib, re
-out = pathlib.Path("dont-make-me-repeat-myself")
+out = pathlib.Path("agent-memory-layer-by-layer")
 assets = {hashlib.md5(p.read_bytes()).hexdigest(): p.name
           for p in pathlib.Path("codelab-assets").iterdir() if p.is_file()}
 html = (out / "index.html").read_text()

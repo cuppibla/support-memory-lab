@@ -1,12 +1,12 @@
 author: Qingyue (Annie) Wang
 summary: Every support experience people hate is a memory failure. Fix five of them yourself — write the load-bearing line, launch adk web, type to Iris, and watch every mechanism fire. Cloud Shell, ADK, Gemini, and one very patient customer named Maya.
-id: dont-make-me-repeat-myself
+id: agent-memory-layer-by-layer
 categories: adk,agents,memory,gemini,cloudshell
 environments: Web
 status: Draft
 feedback link: https://github.com/cuppibla/support-memory-lab/issues
 
-# Don't Make Me Repeat Myself: Build a Support Agent With Real Memory
+# Agent Memory, Layer by Layer: Build a Support Agent That Remembers
 
 ## Overview
 Duration: 6:00

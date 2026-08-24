@@ -1,4 +1,4 @@
-# Don't Make Me Repeat Myself
+# Agent Memory, Layer by Layer
 
 **Build a support agent with real memory — write the key lines yourself, watch every
 one of them fire.**
@@ -29,7 +29,7 @@ PYTHONPATH=$PWD adk web . --allow_origins="*" \
 
 Web Preview → Change port → **8000**.
 
-Then follow the codelab. `CODELAB.md` is the source; `dont-make-me-repeat-myself/`
+Then follow the codelab. `CODELAB.md` is the source; `agent-memory-layer-by-layer/`
 is the rendered version — serve it with `claat serve` (or any static server) and
 open it through Web Preview.
 
@@ -62,7 +62,7 @@ each rung's `tools.py` is where you work.
 
 | | |
 |---|---|
-| `CODELAB.md` | the codelab source — `dont-make-me-repeat-myself/` is the rendered copy (`claat export`) |
+| `CODELAB.md` | the codelab source — `agent-memory-layer-by-layer/` is the rendered copy (`claat export`) |
 | `r1_…` – `r6_…` | the starters you edit, one agent package per rung |
 | `_solutions/` | complete versions, named `solution.py` so `adk web` won't list them as agents |
 | `_shared/` | the Lumen world (40 tickets, 6 tables), the 7 tools, the agent factory |
