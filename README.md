@@ -29,9 +29,9 @@ PYTHONPATH=$PWD adk web . --allow_origins="*" \
 
 Web Preview → Change port → **8000**.
 
-Then follow the codelab. `CODELAB.md` is the source; `agent-memory-layer-by-layer/`
-is the rendered version — serve it with `claat serve` (or any static server) and
-open it through Web Preview.
+Then follow the codelab. It lives in its own repo —
+[cuppibla/support-memory-lab-codelab](https://github.com/cuppibla/support-memory-lab-codelab)
+— so the book and the code version independently. This repo is only the code.
 
 ## How the lab works
 
@@ -62,10 +62,12 @@ each rung's `tools.py` is where you work.
 
 | | |
 |---|---|
-| `CODELAB.md` | the codelab source — `agent-memory-layer-by-layer/` is the rendered copy (`claat export`) |
 | `r1_…` – `r6_…` | the starters you edit, one agent package per rung |
 | `_solutions/` | complete versions, named `solution.py` so `adk web` won't list them as agents |
 | `_shared/` | the Lumen world (40 tickets, 6 tables), the 7 tools, the agent factory |
 | `desk_app/` | the React + FastAPI support desk, on the same services |
 | `warehouse/` | the CSVs you load into BigQuery |
-| `codelab-assets/` | every image in the codelab, with hand-authored SVG sources in `src/` |
+| `setup_cloudshell.sh` · `doctor.py` · `peek.py` | environment setup, a real model check, and a raw SQLite dump |
+
+The instruction manual and its figures are in
+[cuppibla/support-memory-lab-codelab](https://github.com/cuppibla/support-memory-lab-codelab).

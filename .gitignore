@@ -3,7 +3,6 @@
 .venv/
 artifacts_store/
 __pycache__/
-.codelab_local.md
 *.log
 .adk/
 node_modules/
