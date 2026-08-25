@@ -6,7 +6,7 @@ into the session. adk web shows the continuation when you reload the session.
 
 Usage (from repo root): uv run python r2_handoff/supervisor.py [--deny]
 """
-import asyncio, sqlite3, sys
+import asyncio, importlib, sqlite3, sys
 
 from dotenv import load_dotenv
 from google.adk.runners import Runner
@@ -41,6 +41,18 @@ async def main():
         if not pending:
             continue
 
+        # We rebuild the agent from the app name, so we can only answer
+        # sessions that came from an adk web agent folder. Other clients share
+        # this same lumen.db on purpose — desk_app is one — and they have no
+        # <app>/agent.py to import. Skip them instead of dying on the import,
+        # and check BEFORE prompting so nobody reviews a call we can't answer.
+        try:
+            agent_mod = importlib.import_module(f"{app}.agent")
+        except ModuleNotFoundError:
+            print(f"↷ skipping session {sid[:8]}… — '{app}' is not an adk web "
+                  f"agent folder (no {app}/agent.py to rebuild)")
+            continue
+
         print(f"⏸ PENDING: {pending['name']} {pending['args']}  (session {sid[:8]}…)")
         print("─" * 60)
         for ev in s.events:
@@ -53,8 +65,6 @@ async def main():
             else ("approved", "Refund approved. Tell the customer it arrives in 3-5 days.")
         input(f"Press Enter to send: {decision[0].upper()} > ")
 
-        import importlib
-        agent_mod = importlib.import_module(f"{app}.agent")
         runner = Runner(agent=agent_mod.root_agent, app_name=app, session_service=svc)
         resp = types.Content(role="user", parts=[types.Part(
             function_response=types.FunctionResponse(
