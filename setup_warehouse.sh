@@ -90,18 +90,23 @@ MODEL_SQL='CREATE OR REPLACE MODEL lumen.embedder
   REMOTE WITH CONNECTION `'"${REGION}"'.vertex_conn`
   OPTIONS (ENDPOINT = "gemini-embedding-001")'
 
+# Capture BOTH streams. bq puts its progress line ("Waiting on bqjob_… DONE")
+# on stderr but the actual failure ("Error in query string: … does not have the
+# permission …") on stdout, so discarding stdout would throw away the only text
+# worth matching on — and would print the progress line as if it were the error.
+LOG=/tmp/setup_warehouse_embedder.log
 for attempt in $(seq 1 10); do
-  if bq --project_id="$PROJECT" query --use_legacy_sql=false "$MODEL_SQL" >/dev/null 2>/tmp/embedder_err.txt; then
+  if bq --project_id="$PROJECT" query --use_legacy_sql=false "$MODEL_SQL" >"$LOG" 2>&1; then
     echo "    created on attempt $attempt"
     break
   fi
-  if grep -qi "permission\|denied" /tmp/embedder_err.txt && [ "$attempt" -lt 10 ]; then
+  if grep -qi "permission\|denied\|does not have" "$LOG" && [ "$attempt" -lt 10 ]; then
     echo "    attempt $attempt: IAM still propagating, retrying in 20s…"
     sleep 20
     continue
   fi
   echo "!!! CREATE MODEL failed:"
-  cat /tmp/embedder_err.txt
+  cat "$LOG"
   exit 1
 done
 
