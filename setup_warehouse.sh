@@ -1,13 +1,15 @@
 #!/bin/bash
 # The warehouse, provisioned. Everything this script does is plumbing the
 # codelab used to make you type by hand: a bucket, six CSV loads, a BigQuery
-# connection, one IAM grant, and the remote embedding model.
+# connection, one IAM grant, the remote embedding model, and the embeddings
+# themselves.
 #
 # It prints each step as it goes, and it is safe to re-run — every step either
 # replaces what it made or skips what already exists.
 #
-# What it deliberately does NOT do: embed the tickets, or search them. Those
-# two statements are the lesson, and you run them yourself in the console.
+# None of this is the lesson. The lesson is what the agent does with it, one
+# chapter later: a vector search for meaning and a governed join for
+# connection, both called as tools rather than typed as SQL.
 set -e
 cd "$(dirname "$0")"
 
@@ -110,14 +112,27 @@ for attempt in $(seq 1 10); do
   exit 1
 done
 
+# Embed every ticket in place: ML.GENERATE_EMBEDDING calls Vertex from inside
+# BigQuery through the connection above, and writes the vectors back beside the
+# rows they came from. No export, no pipeline, no separate vector database.
+echo "==> Embedding all tickets into lumen.ticket_embeddings…"
+bq --project_id="$PROJECT" query --use_legacy_sql=false >"$LOG" 2>&1 \
+  'CREATE OR REPLACE TABLE lumen.ticket_embeddings AS
+   SELECT id, content, ml_generate_embedding_result AS embedding
+   FROM ML.GENERATE_EMBEDDING(MODEL lumen.embedder,
+        (SELECT id, text AS content FROM lumen.tickets))' || {
+  echo "!!! Embedding failed:"; cat "$LOG"; exit 1; }
+echo "    done"
+
 echo
 echo "==> Verifying"
-TICKETS=$(bq --project_id="$PROJECT" query --use_legacy_sql=false --format=csv \
-  "SELECT COUNT(*) FROM lumen.tickets" | tail -1)
-echo "    tables loaded, lumen.tickets rows: $TICKETS"
+read -r N DIMS <<<"$(bq --project_id="$PROJECT" query --use_legacy_sql=false --format=csv \
+  'SELECT COUNT(*), ARRAY_LENGTH(ANY_VALUE(embedding)) FROM lumen.ticket_embeddings' \
+  | tail -1 | tr ',' ' ')"
+echo "    lumen.ticket_embeddings: $N tickets at $DIMS dimensions"
 echo "    models:"
 bq --project_id="$PROJECT" ls --models lumen | tail -n +3 | sed 's/^/      /'
 
 echo
-echo "✅ Warehouse ready. The graph is in BigQuery and Vertex is reachable from SQL."
-echo "   Next, in the BigQuery console: embed the tickets, then search them."
+echo "✅ Warehouse ready — $N tickets at $DIMS dimensions."
+echo "   The graph is in BigQuery, and meaning is computed beside the rows."
